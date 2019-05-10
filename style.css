@@ -14,8 +14,24 @@ h3 {
   color: teal;
 }
 
+img {
+  /*
+    Center a block element in the middle of its enclosing tag.
+    When you use the "auto" rule on both left and right margins,
+    your browser will do the math necessary to center a block element.
+    */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mainpic {
+  max-width: auto;
+  max-height: 250px;
+}
+
+
 .navbar-custom {
-  background-color: silver;
+  background-color: whitesmoke;
 }
 
 /* change the brand and text color */
@@ -26,15 +42,15 @@ h3 {
 
 /* change the link color and padding  */
 .navbar-custom .navbar-nav .nav-link {
-  color: rgba(255,255,255,.5);
+  color: black;
   padding: .75rem 1rem;
 }
 
 /* change the color and bg color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-  color: #ffffff;
-  background-color: #333;
+  color: black;
+  background-color: silver;
 }
 
 /* for dropdown only - change the color of droodown */
