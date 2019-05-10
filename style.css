@@ -24,9 +24,14 @@ img {
   margin-right: auto;
 }
 
+
+@media (max-width:767px) {
 #mainpic {
+  float: none;
   max-width: auto;
   max-height: 250px;
+  padding: 10px;
+}
 }
 
 
