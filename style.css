@@ -8,10 +8,17 @@ did not find anything that scaled well.   The thumbnail class seems to work best
 
 h2 {
   color: teal;
+  margin: 10px;
 }
 
 h3 {
   color: teal;
+  margin: 10px;
+}
+
+h4 {
+  color: teal;
+  margin: 5px;
 }
 
 img {
@@ -22,6 +29,20 @@ img {
     */
   margin-left: auto;
   margin-right: auto;
+  margin: 20px;
+}
+
+@media (max-width: 767px) {
+  h2 {
+    margin: 5px;
+  }
+  h3 {
+    margin: 5px;
+  }
+  /* img {
+    margin: 10px;
+  }
+  */
 }
 
 
