@@ -4,7 +4,7 @@
     <head>
       <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>Latitude vs Cloudiness</title>
+        <title>Slicing on Latitude</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -17,7 +17,7 @@
   <body>
 
     <div class="container">
-      <nav class="navbar navbar-expand-md navbar-custom rounded">
+      <nav id="custom" class="navbar navbar-expand-md navbar-custom rounded">
         <a class="navbar-brand" href="index.html">Latitude</a>
         <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -40,8 +40,8 @@
               <a class="nav-link" href="comparison.html">Comparison</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="sliced.html">Slicing</a>
-              </li>
+                    <a class="nav-link" href="sliced.html">Slicing</a>
+                  </li>
             <li class="nav-item">
               <a class="nav-link" href="datatable.html">Data</a>
             </li>
@@ -51,62 +51,37 @@
       </nav>
 
       <main role="main">
-        
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8">
-              <!-- <div class="jumbotron"> -->
-                <h2>Summary: Latitude vs. Cloudiness</h2>
-                <hr class="my-4">
-                  <p>  <a target="_blank" href="Resources/assets/images/Fig3.png"><img src="Resources/assets/images/Fig3.png" alt="Cloudiness vs Lattitude" class="img-thumbnail" id="visualization"></a>
-                   </p>
-                   <p>Cloudiness does not appear to depend on latitude. There are noticeable bands of cities with cloudiness at 0%, 20%, 40%, 75% and 90%.</p>
+        <div class="row">
+            <div class="col">
 
-                   <p> We can focus on these bands by looking at a histogram of cloudiness.</p>
-                    
-                   <p>  <a target="_blank" href="Resources/assets/images/cloudhist.png"><img src="Resources/assets/images/cloudhist.png" alt="Cloudiness" class="img-thumbnail" id="visualization"></a>
-                   </p>
+                <p>If one divides the observations by latitude into 5 bins with an equal number
+                    of observations, one can see how the weather factors change with latitude as seen
+                    in the plot below.
+                </p>
 
-              <!-- </div> -->
-            </div>
-        
-            <div class="col-md-4">
-              <!-- <div class="jumbotron"> -->
-                <h3>Visualizations</h3>
-                <hr class="my-4">
-                
-                <div class="row">
-                  <div class="col-md-6 col-sm-3">
-                      <!-- <div class="thumnbail"> -->
-                         <a href="maxtemp.html"> <img src="Resources/assets/images/Fig1.png"
-                          alt="..." class="img-thumbnail"> </a>
-                      <!-- </div> -->
-                  </div>
-                  <div class="col-md-6 col-sm-3">
-                        <!-- <div class="thumbnail"> -->
-                          <a href="humidity.html"><img src="Resources/assets/images/Fig2.png" alt="..." class="img-thumbnail">
-                        <!-- </div> --></a>
-                      </div>
-                
-                  <!-- Force next columns to break to new line at md breakpoint and up -->
-                  <div class="w-100 d-none d-md-block"></div>
-                
-                  <div class="col-md-6 col-sm-3">                      
-                    <!-- <div class="thumbnail"> -->
-                      <a href="cloudiness.html"><img src="Resources/assets/images/Fig3.png" alt="..." class="img-thumbnail">
-                    <!-- </div> --></a>
-                  </div>
-                  <div class="col-md-6 col-sm-3">   
-                      <a href="windspeed.html"><img src="Resources/assets/images/Fig4.png" alt="..." class="img-thumbnail"></a>
-                  </div>
-                </div>
-               
-               
-              <!-- </div> -->
+                <p> The distribution of humidity has a similar shape across the 5 regions of latitude; however,
+                    it is less spread out for latitudes near the equator and latitudes above 50.  
+                </p>
+
+                <p> The distributions of cloudiness are bimodal but the highest peak in the distribution
+                     depends on the latitude.   
+                </p>
+
+                <p> The distributions of temperature are unimodal but the direction of skewness in
+                    the distribution depends on the latitude. </p>
+
+                <p> The distribution of wind speed has a similar shape across the 5 regions of latitude; 
+                    however, it is less spread out for latitiudes near the equator.  
+                </p>
+                <p>
+                <!-- <div class="thumnbail"> -->
+                   <a target="_blank" href="Resources/assets/images/pairs.png"> <img src="Resources/assets/images/pairs.png"
+                    alt="..." class="img-thumbnail"> </a>
+                <!-- </div> -->
+                </p>
             </div>
 
-          </div>
-      </div>
+        </div>
       </main>
     </div>
 
